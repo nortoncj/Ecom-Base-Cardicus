@@ -1,0 +1,110 @@
+
+:root {
+    --indigo: #2b192e;
+    --cream:#f5e8da;
+    --camel:#c19a6b;
+    --rome:#65272c;
+    --primary-font:'Fauna One', serif;
+    --title-font:'Cinzel', serif;
+}
+html, body {
+    font-family: var(--primary-font);
+    
+}
+
+.blog-page__title h1{
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 1.3rem 1.5rem;
+    font-family: var(--title-font);
+    border-bottom: rgb(101, 39, 44,0.05) 1px solid;
+}
+ .blog-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+ }
+
+ .blog-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    cursor: pointer;
+ }
+ .blog-box {
+    height: 500px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    background-color:  rgb(193, 154, 107,0.2);
+ }
+ .blog-box img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    
+ }
+ .blog-text{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Times New Roman', Times, serif;
+ }
+
+ .blog-text-title__section{
+    border-bottom: 1px #2b192e  solid;
+    
+ }
+ .blog-text p {
+    padding:10px;
+ }
+
+ .blog-text__title{
+    font-family: var(--title-font);
+    color:var(--camel);
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 10px;
+ }
+ .blog-text__date{
+    font-size: 0.9rem;
+    color:#65272c;
+    font-family: var(--primary-font);
+    padding: 0 10px;
+ }
+
+ /* TABLET */
+ @media screen and (max-width: 1250px) {
+    .blog-section{
+        flex-direction: column;
+    }
+
+    .blog-box {
+        width: 700px;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .blog-section{
+        flex-direction: column;
+    }
+    .blog-box {
+        height: 500px;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        background-color:  rgb(193, 154, 107,0.2);
+     }
+     .blog-container {
+      
+     }
+     .blog-secton{
+      padding: none;
+     }
+    
+}

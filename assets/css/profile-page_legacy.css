@@ -1,0 +1,276 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:#333 ;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #00539C,#EEA47F);
+}
+
+.customerCard {
+    position: relative;
+    width: 28em !important;
+    height: 40em;
+    background: #FAF9F6;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition: 0.5s;
+}
+
+.customerCard:hover {
+    height: 700px;
+}
+
+.imgBx {
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translate(-50%);
+    width: 150px;
+    height: 150px;
+    background: #FAF9F6;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.customerCard:hover .imgBx {
+    width: 250px;
+    height:250px;
+}
+
+.imgBx img {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.customerCard .cardContent {
+    position: absolute;
+    top:4%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.customerCard .cardContent .cardDetails {
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.customerCard .cardContent .cardDetails h2 {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.2em
+}
+
+.customerCard .cardContent .cardDetails h2 span {
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+.customerCard .cardContent .cardDetails .customer-data .actionBtn {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+    margin:20px auto;
+    
+   
+}
+
+.customerCard .cardContent .cardDetails .customer-data .actionBtn input {
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+    font-weight: 500;
+    background:#cec9c6;
+    color: rgb(51, 51, 51,0.7);
+    
+    cursor: pointer;
+}
+.customerCard .cardContent .cardDetails .customer-data .actionBtn input:hover {
+    background: #E1D9D1;
+}
+
+.customerCard .cardContent .cardDetails h3 {
+    font-size: 1.25em;
+    font-weight: 450;
+    opacity: 0.65;
+    font-style: oblique;
+    text-align: center
+}
+.customerCard .cardContent .cardDetails .bio-data {
+    font-size: 0.90em;
+    font-weight: 400;
+    opacity: 0.65;
+    font-style: strong;
+    text-align: center;
+}
+
+.btn {
+    
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 12px;
+    width: 50px;
+    height: 20px;
+   margin: 5px 30px 15px 30px;
+   box-shadow: -10px -10px 15px rgba(255,255,255,0.5), 10px 10px 15px rgba(70,70, 70,0.12);
+   align-items: center;
+   justify-content: space-evenly;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    gap:80px;
+    
+    
+}
+.action-buttons{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.phone-button {
+    color: white;
+    background: turquoise;
+    
+
+}
+
+.phone-button:hover {
+    color: white;
+    background: aquamarine;
+    height: 20px;
+    
+    
+
+
+}
+.email-button {
+    color: white;
+    background: skyblue;
+
+}
+.email-button:hover {
+    color: white;
+    background: powderblue;
+    
+
+}
+
+
+.contact-link {
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    background: black;
+    color: white;
+}
+.contact-link:hover {
+    padding: 10px;
+}
+.social-links{
+    height:30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: justify-inline;
+    flex-wrap:wrap;
+}
+
+
+.icon {
+    text-decoration: none;
+    font-size: 1.45em;
+    border-radius : 60%;
+    height: 35px;
+    width: 35px;
+    padding: 10px;
+    box-shadow: -10px -10px 15px rgba(255,255,255,0.5), 10px 10px 15px rgba(70,70, 70,0.12);
+    margin: 5px 5px 5px 5px;
+    transform: translate(-50%,-50%);
+    outline: none;
+    font-size: 15px;
+    cursor: pointer;
+    gap:160px;
+}
+.fb-icon {
+    color: #5072A7;
+}
+.fb-icon:hover {
+    background: #5072A7;
+    color: white;
+}
+.twt-icon {
+    color: #6CACE4;
+}
+.twt-icon:hover {
+    background: #6CACE4;
+    color: white;
+}
+
+.li-icon {
+    color: #007FFF;
+}
+
+.ig-icon {
+    color:rosybrown;
+}
+
+.ig-icon:hover {
+    background: rgba(163, 48, 174, 0.7) !important;
+    color:white;
+}
+
+.li-icon:hover {
+    background: #007FFF;
+    color: white;
+}
+
+
+.tt-icon {
+    color: white;
+    background: black;
+}
+.tt-icon:hover {
+    color: lightgrey;
+}
+
+.yt-icon {
+    color: red;
+}
+.yt-icon:hover {
+    background: red;
+    color: white;
+}
+
+.tw-icon {
+    color: purple;
+}
+.tw-icon:hover {
+    background: purple;
+    color:white;
+}

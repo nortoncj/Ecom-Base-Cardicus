@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="./assets/css/reset.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&family=Fauna+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="./assets/fontawesome-pro-6.4.0-web/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="./assets/css/header.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/cart.css" />
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+    <link href="./assets/css/footer.css" rel="stylesheet" />
+    <title>Home</title>
+  </head>
+  <body>
+    <section class="top-nav">
+      <div class="announcement-bar top-nav__group">
+        <div class="top-nav__group-link country-selector">Ship to: US</div>
+        <div class="countdown-menu">
+          <div class="countdown-menu_messsage--desktop">
+            <h1>GRAND OPENING</h1>
+          </div>
+          <div class="countdown-menu_numbers">
+            <div class="days">180</div>
+            <span> :</span>
+            <div class="hours">6</div>
+            <span> :</span>
+            <div class="minutes">11</div>
+            <span> :</span>
+            <div class="seconds">12</div>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-nav">
+        <div class="mobile-menu-toggle" onclick="openNav()">
+          <i class="fa-light fa-solid fa-bars"></i>
+        </div>
+        <div class="mobile-menu mobile-menu__side-menu">
+          <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+              >&times;</a
+            >
+            <div class="mobile-brand__logo">
+              <a href="index.html">Brand Name</a>
+            </div>
+            <a href="/shop.html">Shop</a>
+            <a href="/about.html">About</a>
+            <a href="/blog.html">News</a>
+            <a href="./backend/user-login-page.html">Login</a>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li class="nav-item nav-link nav-main">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="nav-item nav-link nav-main">
+            <a href="shop.html">Shop</a>
+          </li>
+          <li class="nav-item nav-link nav-main">
+            <a href="about.html">About</a>
+          </li>
+          <li class="nav-item nav-link nav-main">
+            <a href="blog.html">News</a>
+          </li>
+          <div class="nav_brand-logo nav-item">
+            <a href="index.html">Brand Name</a>
+          </div>
+          <li class="nav-item nav-link nav-login nav-main">
+            <a href="/backend/user-login-page.html">Login</a>
+          </li>
+          <li class="nav-item nav-link nav-login nav-search">
+            <a href="/backend/user-login-page.html">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-search"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="nav-item nav-cart nav-link nav-login nav-search">
+            <a
+              href="javascript:void(0)"
+              onclick="OpenCart()"
+              id="open_cart_btn"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-bag"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"
+                />
+              </svg>
+              <div id="cartAmount" class="cartAmount">0</div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="main_hero">
+      <div class="main_hero-image">
+        <div class="main_hero-text">
+          <h1>The Heart of the People</h1>
+        </div>
+      </div>
+    </section>
+    <!-- =================================================== CART MODULE =======================================  -->
+
+    <div id="sidecart" class="sidecart">
+      <div class="cart_content">
+        <!-- Cart Header -->
+        <div class="cart_header">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30px"
+            height="30px"
+            fill="currentColor"
+            class="bi bi-bag"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"
+            />
+          </svg>
+          <div class="header_title">
+            <h2>Your Cart</h2>
+            <small id="'items_num">4</small>
+          </div>
+          <span id="close_btn" onclick="CloseCart()" class="close_btn"
+            ><i class="fa-regular fa-xmark"></i
+          ></span>
+        </div>
+        <!-- Cart Items -->
+        <div class="cart_items">
+          <!-- Item 1 -->
+          <div class="cart_item">
+            <div class="remove_item">
+              <i class="fa-regular fa-xmark"></i>
+            </div>
+            <div class="item_img">
+              <img
+                src="./assets/img/products/NFC-CARD-SAMPLE-PNG-1.png"
+                alt=""
+              />
+            </div>
+            <div class="item_details">
+              <p>Gladius Card</p>
+              <strong>$4.99</strong>
+              <div class="qty">
+                <span>-</span>
+                <strong>1</strong>
+                <span>+</span>
+              </div>
+            </div>
+          </div>
+          <!-- /Item 1 -->
+        </div>
+        <!-- Cart Actions -->
+        <div class="cart_actions">
+          <div class="subtotal">
+            <p>SUBTOTAL:</p>
+            <p>$<span id="subtotal_price">22.35</span></p>
+          </div>
+          <button>View Cart</button>
+          <button>Checkout</button>
+        </div>
+      </div>
+    </div>
+    <!-- =================================================== END CART MODULE =======================================  -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-row">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">our services</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#">affiliate program</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">shipping</a></li>
+              <li><a href="#">returns</a></li>
+              <li><a href="#">order status</a></li>
+              <li><a href="#">payment options</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>online shop</h4>
+            <ul>
+              <li><a href="#">cards</a></li>
+              <li><a href="#">Sales</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="assets/js/navMenu.js"></script>
+      <script src="assets/js/productCart.js"></script>
+    </footer>
+  </body>
+</html>
